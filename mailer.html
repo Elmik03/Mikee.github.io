@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <meta name="viewport" content="width=device-width"/>
+  <title>Form in HTML</title>  
+</head>  
+ <body>  
+     <h2>Registration form</h2>  
+    <form action="email.php" method="POST">  
+     <fieldset>  
+        <legend><b><i>User personal information</i></b></legend>  
+        <label>Enter your Full Name</label><br>  
+        <input type="text" name="name"required><br>  
+         <label>Enter your Email</label><br>  
+         <input type="email" name="email" required><br>  
+         <label>Subject</label><br>  
+         <input type="text" name="subject"><br>  
+         <!-- <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  -->
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>   
+          <br>Enter your Message:<br>  
+         <textarea name="message"></textarea><br>  
+         <input type="submit" value="Send Mail">  
+     </fieldset>  
+  </form>  
+ </body>  
+</html>
