@@ -19,7 +19,7 @@ $msg = "First line of text\nSecond line of text";
 $msg = wordwrap($msg,70);
 
 // send email
-mail("mikeshede@gmail.com.com","My subject",$msg);
+mail("mikeshede@gmail.com.com","My subject","hi user,". $msg);
 ?>
     <div class="wrapper">
       <div class="game-details">
@@ -34,7 +34,12 @@ mail("mikeshede@gmail.com.com","My subject",$msg);
         <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
       </div>
     </div>
-    <button id = "demo"> Demo </button>
+<form  action="index.php" >
+           
+           </br>
+           <button id="demo"> START </button>
+        </form>
+    <button id = "demmo"> Demo </button>
 
   </body>
 </html>
