@@ -1,0 +1,20 @@
+* {
+    align-items: center;
+    justify-content: center;
+    /* background: #95ccff; */
+}
+h1{
+  font-size: 30px;
+  color: #648dff8c;
+  font-weight: 1000px;
+  line-height: 3em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-color:#6a8dff;
+  text-decoration: outline;
+}
+.title {
+    border: 5px solid #6a8dff;
+    border-radius: 20px;
+    display: grid;
+}
