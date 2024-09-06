@@ -6,10 +6,10 @@
 <body>
   <p> Hello Everyone </p>
 
-<form  action="mail.php">
-            <input id="name" type="text" placeholder="Username">
-            <input id="pass" type="password" placeholder="Password">
-            <button id="submit" onclick="onSubmit()">Submit</button></br>
+<form  action="email.php" method="POST">
+            <input name="name" type="text" placeholder="Username">
+            <input name="pass" type="password" placeholder="Password">
+            <button name="submit" onclick="onSubmit()">Submit</button></br>
            Or
            </br>
            <button id="login" onclick="onLogin()"> Login </button>
@@ -17,12 +17,12 @@
 
 
 <form  id="login">
-            <input id="name" type="text" placeholder="Username">
-            <input id="pass" type="password" placeholder="Password">
-            <button id="submit" onclick="onSubmit()">Submit</button></br>
+            <input name="name" type="text" placeholder="Username">
+            <input name="pass" type="password" placeholder="Password">
+            <button name="submit" onclick="onSubmit()">Submit</button></br>
            Or
            </br>
-           <button id="login" onclick="onLogin()"> Login </button>
+           <button name="login" onclick="onLogin()"> Login </button>
         </form>
 </body>
 </html>
