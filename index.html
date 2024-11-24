@@ -1,30 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<html>
-   <head>
-   </head>
-   
-   <body>
-      <p>Move the mouse over the words to see the cursor change:</p>
-      
-      <div style = "cursor:auto">Auto</div>
-      <div style = "cursor:crosshair">Crosshair</div>
-      <div style = "cursor:default">Default</div>
-      
-      <div style = "cursor:pointer">Pointer</div>
-      <div style = "cursor:move">Move</div>
-      <div style = "cursor:e-resize">e-resize</div>
-      <div style = "cursor:ne-resize">ne-resize</div>
-      <div style = "cursor:nw-resize">nw-resize</div>
-      
-      <div style = "cursor:n-resize">n-resize</div>
-      <div style = "cursor:se-resize">se-resize</div>
-      <div style = "cursor:sw-resize">sw-resize</div>
-      <div style = "cursor:s-resize">s-resize</div>
-      <div style = "cursor:w-resize">w-resize</div>
-      
-      <div style = "cursor:text">text</div>
-      <div style = "cursor:wait">wait</div>
-      <div style = "cursor:help">help</div>
-   </body>
-<script > window.location.href= "Profound-Health-Care/index.html";</script>
-</html> 
+    <title>Upload Files</title>
+  </head>
+
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="files[]" multiple />
+      <input type="submit" value="Upload File" name="submit" />
+    </form>
+
+    <script src="upload.js"></script>
+  </body>
+</html>
