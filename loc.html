@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  
+        <style>
+            * {
+                background: #dededea1;
+            }
+            button {
+                width: 150px;
+                height: 50px;
+                margin: 9px;
+                background: #80ff98;
+                border-radius: 25px;
+                font~size: 35dp;
+            }
+            #open {
+                background: #80eaff;
+            }
+        </style>
+    </head>
 <body>
 <h1>HTML Geolocation</<!DOCTYPEh1>
 <p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Try It</button>
+<button disabled id="open" onclick="opens()"> Open Location</button>
+
+
 
 <p id="demo"></p>
-
+<p id="city"></p>
+<!-- <script src="cognito.js"></script> -->
 <script>
 const x = document.getElementById("demo");
+const y = document.getElementById("city");
+let lat ="";
+let lng ="";
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
+    
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -22,7 +51,22 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
+  document.getElementById("open").disabled = false
+lat = position.coords.latitude;
+lng = position.coords.longitude;
+let key = "4f9cd3b9b2434996bde76c1ce30ff3ac"
+fetch("https://api.opencagedata.com/geocode/v1/json?q=" + lat + "+" + lng + "&key=" + key ).then((res) => {myCity = res.json()});
+alert (myCity);
+y.innerHTML = myCity + "\n" + myCity[0].formatted;
+
+
+
 }
+function opens() {
+    window.location.href = "https://www.latlong.net/c/?lat=" +lat+ "&long="+lng;
+    alert(lat+", "+lng)
+}
+
 </script>
 
 </body>
