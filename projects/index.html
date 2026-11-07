@@ -1,72 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mikee™ Projects</title>  
-    <meta name="viewport" content="width=device-width" />
-    <script src="scripts.js">
-        
-    </script>
-    <style>
-        * {
-            background: dedede;<!-- url("bg.png") -->
-            color : #ffeaff;
-            font-size:30px ;
-        }
-        h2 {
-            border-radius: 12px;
-            background: #aaf4ff;
-            color:#0a6573;
-            padding: 5px;
-        }
-        p {
-            color: #000854;
-        }
-        li {
-            list-style: none;
-            border: 1px solid #997e32;
-          border-radius: 9px;
-           margin: 7px;
-           padding: 5px;
-           align-items: center;
-           justify-content: center;
-        }
-        ul {
-            width: auto;
-            max-width: 20rem;
-        }
-        a {
-            text-decoration: none;
-            font-weight: 600px;
-            color : #736d13;
-           text-align: center;
-           align-items: center;
-           justify-content: center;
-            flex-wrap: wrap;
-        }
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Practice projects | Elmik03 projects</title>
+<meta name="description" content="Calculators, converters, small apps, games and interface pieces built by Elmik03.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cobalt:#1d3fa8;--paper:#f5f6f8;--surface:#fff;--ink:#10173a;--muted:#4a5272;--line:#d5d9e6;--sky:#dfe6fb;--amber:#ffc83d;
+--display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--cobalt:#16318a;--paper:#0e1330;--surface:#161c42;--ink:#eef0fa;--muted:#a3abcc;--line:#2a3262;--sky:#1d2757}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{width:min(100% - 2.5rem,62rem);margin-inline:auto}
+.hero{background:var(--cobalt);color:#fff;padding:1.25rem 0 3rem}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.75rem}
+.brand{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none}
+.bar nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.bar nav a{font-weight:500;text-decoration:underline;text-underline-offset:4px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.25rem,7vw,4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 1rem}
+.hero p{font-size:1.15rem;max-width:36rem;margin:0;color:#e6ebfb}
+main{padding:2.5rem 0 2rem}
+.search{display:block;margin:0 0 2.5rem}
+.search span{display:block;font-weight:600;margin-bottom:.4rem}
+.search input{font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:.6rem;padding:.7rem 1rem;width:min(100%,26rem)}
+.search input:focus-visible{border-color:var(--cobalt)}
+.empty{color:var(--muted)}
+.group{margin:0 0 2.75rem}
+.group[hidden]{display:none}
+.group h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,3.5vw,1.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 .75rem;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.group h2 small{font-family:var(--body);font-weight:500;font-size:.95rem;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));column-gap:1.5rem}
+.list li{border-bottom:1px solid var(--line)}
+.list li[hidden]{display:none}
+.list a{display:block;padding:.7rem .5rem;text-decoration:none;font-weight:500}
+.list a:hover{background:var(--sky)}
+footer .about{border-top:1.5px solid var(--ink);padding:2rem 0 3rem;color:var(--muted)}
+footer .about p{margin:0;max-width:38rem}
+footer .about a{color:var(--ink);font-weight:600;text-underline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <div>
-        <div class="Title">
-            <img src="logo.png" alt="logo">
-            <h2>Web Projects</h2></div>
-        <p>
-            There are a few of my projects, feel free to check it out.
-        </p>
+<header class="hero">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="https://elmik03.github.io/Mikee-web/">Elmik03 projects</a>
+      <nav aria-label="Site">
+        <a href="https://elmik03.github.io/Mikee-web/">Tools</a>
+        <a href="../more-projects/moreproject.html">More projects</a>
+        <a href="https://github.com/Elmik03">GitHub</a>
+      </nav>
     </div>
-    <div>
-     <ul>
-         <li><a href="age-calculator">AGE-CALCULATOR</a></li><li><a href="amine-pics-generator/">ANIME-PICS-GENERATOR</a></li><li><a href="animated-search-bar/">ANIMATED-SEARCH-BAR</a></li><li><a href="auto-text-effect-animation">AUTO-TEXT-EFFECT-ANIMATION</a></li><li><a href="background-image-scroll-effect">BACKGROUND-IMAGE-SCROLL-EFFECT</a></li><li><a href="background-video">BACKGROUND-VIDEO</a></li><li><a href="basic-calculator">BASIC-CALCULATOR</a></li><li><a href="blurred-background-popup">BLURRED-BACKGROUND-POPUP</a></li><li><a href="bmi-calculator">BMI-CALCULATOR</a></li><li><a href="button-ripple-effect">BUTTON-RIPPLE-EFFECT</a></li><li><a href="clock">CLOCK</a></li><li><a href="counter">COUNTER</a></li><li><a href="currency-converter">CURRENCY-CONVERTER</a></li><li><a href="dad-jokes-generator">DAD-JOKES-GENERATOR</a></li><li><a href="dark-mode-toggle">DARK-MODE-TOGGLE</a></li><li><a href="dice-roll-simulator">DICE-ROLL-SIMULATOR</a></li><li><a href="digital-clock">DIGITAL-CLOCK</a></li><li><a href="double-landing-page">DOUBLE-LANDING-PAGE</a></li><li><a href="drag-and-drop">DRAG-AND-DROP</a></li><li><a href="drum-kits">DRUM-KITS</a></li><li><a href="emoji-rating">EMOJI-RATING</a></li><li><a href="english-dictionary">ENGLISH-DICTIONARY</a></li><li><a href="feedback-ui">FEEDBACK-UI</a></li><li><a href="heart-trail-animation">HEART-TRAIL-ANIMATION</a></li><li><a href="image-search-app">IMAGE-SEARCH-APP</a></li><li><a href="image-slider">IMAGE-SLIDER</a></li><li><a href="loading-bar">LOADING-BAR</a></li><li><a href="loan-calculator">LOAN-CALCULATOR</a></li><li><a href="mini-calender">MINI-CALENDER</a></li><li><a href="mouse-event">MOUSE-EVENT</a></li><li><a href="multiplication-app">MULTIPLICATION-APP</a></li><li><a href="music-player">MUSIC-PLAYER</a></li><li><a href="navbar">NAVBAR</a></li><li><a href="new-year-countdown">NEW-YEAR-COUNTDOWN</a></li><li><a href="note-app">NOTE-APP</a></li><li><a href="photo-gallery">PHOTO-GALLERY</a></li><li><a href="pomodoro-timer">POMODORO-TIMER</a></li><li><a href="profile-statistics">PROFILE-STATISTICS</a></li><li><a href="q-and-a-section">Q-AND-A-SECTION</a></li><li><a href="random-color-generator">RANDOM-COLOR-GENERATOR</a></li><li><a href="random-photos">RANDOM-PHOTOS</a></li><li><a href="random-quote-generator">RANDOM-QUOTE-GENERATOR</a></li><li><a href="real-time-character-counter">REAL-TIME-CHARACTER-COUNTER</a></li><li><a href="recipe-book-app">RECIPE-BOOK-APP</a></li><li><a href="rock-paper-scissors-game">ROCK-PAPER-SCISSORS-GAME</a></li><li><a href="rotating-image-gallery">ROTATING-IMAGE-GALLERY</a></li><li><a href="sidebar">SIDEBAR</a></li><li><a href="social-media-selector-menu">SOCIAL-MEDIA-SELECTOR-MENU</a></li><li><a href="step-progress-bar">STEP-PROGRESS-BAR</a></li><li><a href="sticky-navbar">STICKY-NAVBAR</a></li><li><a href="stopwatch">STOPWATCH</a></li><li><a href="tabs">TABS</a></li><li><a href="temperature-converter">TEMPERATURE-CONVERTER</a></li><li><a href="testimonial-slider">TESTIMONIAL-SLIDER</a></li><li><a href="tip-calculator">TIP-CALCULATOR</a></li><li><a href="to-do-list">TO-DO-LIST</a></li><li><a href="video-trailer-popup">VIDEO-TRAILER-POPUP</a></li><li><a href="weather-app">WEATHER-APP</a></li><li><a href="weight-converter">WEIGHT-CONVERTER</a></li>
-     </ul>
-    </div>
-</body>
+    <h1>Practice projects</h1>
+    <p>Calculators, small apps, games and interface pieces built while learning web development.</p>
+  </div>
+</header>
 
- 
+<main class="wrap">
+  <label class="search">
+    <span>Search 59 projects</span>
+    <input id="q" type="search" placeholder="Try calculator, login or game" autocomplete="off">
+  </label>
+  <p class="empty" id="none" role="status" hidden>No projects match your search. Try a shorter word.</p>
+
+    <section class="group">
+      <h2>Calculators and converters <small>8</small></h2>
+      <ul class="list">
+        <li><a href="age-calculator">Age calculator</a></li>
+        <li><a href="basic-calculator">Basic calculator</a></li>
+        <li><a href="bmi-calculator">BMI calculator</a></li>
+        <li><a href="currency-converter">Currency converter</a></li>
+        <li><a href="loan-calculator">Loan calculator</a></li>
+        <li><a href="temperature-converter">Temperature converter</a></li>
+        <li><a href="tip-calculator">Tip calculator</a></li>
+        <li><a href="weight-converter">Weight converter</a></li>
+      </ul>
+    </section>
+    <section class="group">
+      <h2>Everyday apps <small>20</small></h2>
+      <ul class="list">
+        <li><a href="clock">Clock</a></li>
+        <li><a href="digital-clock">Digital clock</a></li>
+        <li><a href="counter">Counter</a></li>
+        <li><a href="stopwatch">Stopwatch</a></li>
+        <li><a href="pomodoro-timer">Pomodoro timer</a></li>
+        <li><a href="new-year-countdown">New year countdown</a></li>
+        <li><a href="to-do-list">To do list</a></li>
+        <li><a href="note-app">Note app</a></li>
+        <li><a href="recipe-book-app">Recipe book app</a></li>
+        <li><a href="weather-app">Weather app</a></li>
+        <li><a href="english-dictionary">English dictionary</a></li>
+        <li><a href="image-search-app">Image search app</a></li>
+        <li><a href="music-player">Music player</a></li>
+        <li><a href="mini-calender">Mini calendar</a></li>
+        <li><a href="random-quote-generator">Random quote generator</a></li>
+        <li><a href="dad-jokes-generator">Dad jokes generator</a></li>
+        <li><a href="random-color-generator">Random color generator</a></li>
+        <li><a href="random-photos">Random photos</a></li>
+        <li><a href="real-time-character-counter">Real time character counter</a></li>
+        <li><a href="profile-statistics">Profile statistics</a></li>
+      </ul>
+    </section>
+    <section class="group">
+      <h2>Games and play <small>4</small></h2>
+      <ul class="list">
+        <li><a href="dice-roll-simulator">Dice roll simulator</a></li>
+        <li><a href="drum-kits">Drum kits</a></li>
+        <li><a href="rock-paper-scissors-game">Rock paper scissors game</a></li>
+        <li><a href="multiplication-app">Multiplication app</a></li>
+      </ul>
+    </section>
+    <section class="group">
+      <h2>Interface pieces <small>19</small></h2>
+      <ul class="list">
+        <li><a href="navbar">Navbar</a></li>
+        <li><a href="sticky-navbar">Sticky navbar</a></li>
+        <li><a href="sidebar">Sidebar</a></li>
+        <li><a href="tabs">Tabs</a></li>
+        <li><a href="animated-search-bar">Animated search bar</a></li>
+        <li><a href="dark-mode-toggle">Dark mode toggle</a></li>
+        <li><a href="drag-and-drop">Drag and drop</a></li>
+        <li><a href="blurred-background-popup">Blurred background popup</a></li>
+        <li><a href="video-trailer-popup">Video trailer popup</a></li>
+        <li><a href="loading-bar">Loading bar</a></li>
+        <li><a href="step-progress-bar">Step progress bar</a></li>
+        <li><a href="emoji-rating">Emoji rating</a></li>
+        <li><a href="feedback-ui">Feedback UI</a></li>
+        <li><a href="q-and-a-section">Q&amp;A section</a></li>
+        <li><a href="social-media-selector-menu">Social media selector menu</a></li>
+        <li><a href="image-slider">Image slider</a></li>
+        <li><a href="testimonial-slider">Testimonial slider</a></li>
+        <li><a href="button-ripple-effect">Button ripple effect</a></li>
+        <li><a href="double-landing-page">Double landing page</a></li>
+      </ul>
+    </section>
+    <section class="group">
+      <h2>Effects and galleries <small>8</small></h2>
+      <ul class="list">
+        <li><a href="auto-text-effect-animation">Auto text effect animation</a></li>
+        <li><a href="background-image-scroll-effect">Background image scroll effect</a></li>
+        <li><a href="background-video">Background video</a></li>
+        <li><a href="heart-trail-animation">Heart trail animation</a></li>
+        <li><a href="mouse-event">Mouse event</a></li>
+        <li><a href="photo-gallery">Photo gallery</a></li>
+        <li><a href="rotating-image-gallery">Rotating image gallery</a></li>
+        <li><a href="amine-pics-generator/">Anime pics generator</a></li>
+      </ul>
+    </section>
+</main>
+
+<footer class="wrap">
+  <div class="about">
+    <p>Built by Michael (Elmik03), a web and mobile app developer. See the code on <a href="https://github.com/Elmik03">GitHub</a>.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var input=document.getElementById('q');
+  var groups=document.querySelectorAll('.group');
+  var none=document.getElementById('none');
+  input.addEventListener('input',function(){
+    var q=input.value.trim().toLowerCase();
+    var shown=0;
+    groups.forEach(function(g){
+      var any=false;
+      g.querySelectorAll('li').forEach(function(li){
+        var ok=!q||li.textContent.toLowerCase().indexOf(q)!==-1;
+        li.hidden=!ok;
+        if(ok){any=true;shown++;}
+      });
+      g.hidden=!any;
+    });
+    none.hidden=shown!==0;
+  });
+})();
+</script>
+</body>
 </html>
